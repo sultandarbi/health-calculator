@@ -1063,24 +1063,24 @@
             }
         }
         // ══════════════════════════════════════════════════════════
-// 📊 سكربت عداد الزوار الخفي - يظهر في Console فقط
-// ══════════════════════════════════════════════════════════
+        // 📊 سكربت عداد الزوار الخفي - يظهر في Console فقط
+        // ══════════════════════════════════════════════════════════
 
-// 1. معرف موقعك الفريد (غيّره لأي اسم تريده)
-const SITE_ID = 'my-website-2025';
+        // 1. معرف موقعك الفريد (غيّره لأي اسم تريده)
+        const SITE_ID = 'my-website-2025';
 
-// 2. رابط API
-const API_URL = `https://api.countapi.xyz/hit/${SITE_ID}/visits`;
+        // 2. رابط API
+        const API_URL = `https://api.countapi.xyz/hit/${SITE_ID}/visits`;
 
-// 3. عرض معلومات جميلة في Console
-console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #667eea; font-weight: bold;');
-console.log('%c📊 نظام تتبع الزوار', 'color: #667eea; font-size: 18px; font-weight: bold;');
-console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #667eea; font-weight: bold;');
+        // 3. عرض معلومات جميلة في Console
+        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #667eea; font-weight: bold;');
+        console.log('%c📊 نظام تتبع الزوار', 'color: #667eea; font-size: 18px; font-weight: bold;');
+        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #667eea; font-weight: bold;');
 
-// 4. جلب عدد الزوار
-fetch(API_URL)
-    .then(response => response.json())
-    .then(data => {
+        // 4. جلب عدد الزوار
+        fetch(API_URL)
+        .then(response => response.json())
+        .then(data => {
         // عرض المعلومات في Console
         console.log('%c✅ تم تسجيل الزيارة بنجاح!', 'color: #2ecc71; font-size: 14px; font-weight: bold;');
         console.log('');
@@ -1101,19 +1101,17 @@ fetch(API_URL)
         console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #667eea; font-weight: bold;');
         console.log('%c💡 نصيحة: يمكنك رؤية هذه المعلومات بالضغط على F12', 'color: #95a5a6; font-style: italic;');
         console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #667eea; font-weight: bold;');
-    })
-    .catch(error => {
+        })
+        .catch(error => {
         console.error('%c❌ خطأ في تتبع الزوار:', 'color: #e74c3c; font-weight: bold;', error);
-    });
+        });
 
-// ══════════════════════════════════════════════════════════
-// طريقة الاستخدام:
-// ══════════════════════════════════════════════════════════
-// 1. انسخ هذا الكود كاملاً
-// 2. ضعه داخل <script></script> قبل إغلاق </body>
-// 3. أو احفظه في ملف منفصل مثل: counter.js
-//    ثم أضف: <script src="counter.js"></script>
-// ══════════════════════════════════════════════════════════
+    // ══════════════════════════════════════════════════════════
+    // طريقة الاستخدام:
+    // ══════════════════════════════════════════════════════════
+    // 1. انسخ هذا الكود كاملاً
+    // 2. ضعه داخل <script> قبل إغلاق </body>
+    // ══════════════════════════════════════════════════════════
     </script>
 </body>
 </html>
