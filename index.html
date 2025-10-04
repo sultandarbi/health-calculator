@@ -1062,56 +1062,6 @@
                 });
             }
         }
-        // ══════════════════════════════════════════════════════════
-        // 📊 سكربت عداد الزوار الخفي - يظهر في Console فقط
-        // ══════════════════════════════════════════════════════════
-
-        // 1. معرف موقعك الفريد (غيّره لأي اسم تريده)
-        const SITE_ID = 'effulgent-dodol-e38aa4.netlify.app';
-
-        // 2. رابط API
-        const API_URL = `https://api.countapi.xyz/hit/${SITE_ID}/visits`;
-
-        // 3. عرض معلومات جميلة في Console
-        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #667eea; font-weight: bold;');
-        console.log('%c📊 نظام تتبع الزوار', 'color: #667eea; font-size: 18px; font-weight: bold;');
-        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #667eea; font-weight: bold;');
-
-        // 4. جلب عدد الزوار
-        fetch(API_URL)
-        .then(response => response.json())
-        .then(data => {
-        // عرض المعلومات في Console
-        console.log('%c✅ تم تسجيل الزيارة بنجاح!', 'color: #2ecc71; font-size: 14px; font-weight: bold;');
-        console.log('');
-        console.log('%c🔢 إجمالي عدد الزوار:', 'color: #3498db; font-weight: bold;', data.value);
-        console.log('');
-        
-        // معلومات إضافية عن الزائر الحالي
-        console.log('%c📍 معلومات الزيارة الحالية:', 'color: #9b59b6; font-weight: bold;');
-        console.table({
-            'الوقت': new Date().toLocaleString('ar-SA'),
-            'المتصفح': navigator.userAgent.split(')')[0].split('(')[1] || 'غير معروف',
-            'اللغة': navigator.language,
-            'حجم الشاشة': `${window.screen.width} × ${window.screen.height}`,
-            'المنطقة الزمنية': Intl.DateTimeFormat().resolvedOptions().timeZone
-        });
-        
-        console.log('');
-        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #667eea; font-weight: bold;');
-        console.log('%c💡 نصيحة: يمكنك رؤية هذه المعلومات بالضغط على F12', 'color: #95a5a6; font-style: italic;');
-        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #667eea; font-weight: bold;');
-        })
-        .catch(error => {
-        console.error('%c❌ خطأ في تتبع الزوار:', 'color: #e74c3c; font-weight: bold;', error);
-        });
-
-    // ══════════════════════════════════════════════════════════
-    // طريقة الاستخدام:
-    // ══════════════════════════════════════════════════════════
-    // 1. انسخ هذا الكود كاملاً
-    // 2. ضعه داخل <script> قبل إغلاق </body>
-    // ══════════════════════════════════════════════════════════
     </script>
     <script>
         function cb(response) {
